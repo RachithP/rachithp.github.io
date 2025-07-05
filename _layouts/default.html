@@ -68,6 +68,7 @@
               <h2>Updates</h2>
               <p>
                 <ul>
+                <li>[06/2025] <a href="https://embodied-ai.org/cvpr2025/">Embodied-AI workshop</a> at CVPR.</li>
                 <li>[06/2024] SPEAR made its 5th open-source release! Check it out <a href="https://github.com/spear-sim/spear/releases/tag/v0.5.0">here</a>.</li>
                 <li>[10/2023] Presented SPEAR at the Intel Labs Open House event.</li>
                 <li>[12/2022] SPEAR is now open-source!! 🥳</li>
@@ -132,7 +133,7 @@
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Intel Projects</h2>
-              <p>Besides my work on the RealSense depth sensors and the publications above, a sampling of my publicly disclosed work
+              <p>Some of my publicly disclosed work at Intel
               </p>
             </td>
           </tr>
@@ -206,50 +207,40 @@
         </table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat != 'research' and cat != 'Intel' %}
+          {% assign sorted_projects = site.posts.projects | sort:"order" %}
+          {% for project in sorted_projects %}
+          {% assign sorted_pubs = project.publications | sort:"date" %}
+          {% for post in sorted_pubs %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              <img src="/{{post.links.img}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
               <br>
-              <em>{{post.categories}} {{post.course}}</em>
+              {{post.authors}}
+
               <br>
-              {{ post.date | date: "%Y-%m-%d" }}
+              {{ post.date | date: "%Y-%m" }}
 
               <br>
               {% if post.website %}
               <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
-              {% endif %}
-              {% if post.patent %}
-              <a href="{{post.patent}}">patent</a> /
-              {% endif %}
-              {% if post.patent2 %}
-              <a href="{{post.patent2}}">patent #2</a> /
-              {% endif %}
-              {% if post.patent3 %}
-              <a href="{{post.patent3}}">patent #3</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.video2 %}
-              <a href="{{post.video2}}">video #2</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
               {% endif %}
               {% if post.poster %}
               <a href="{{post.poster}}">poster</a> /
               {% endif %}
               {% if post.slides %}
               <a href="{{post.slides}}">slides</a> /
+              {% endif %}
+              {% if post.links.video %}
+              <a href="{{post.links.video}}">video</a> /
+              {% endif %}
+              {% if post.links.preprint %}
+              <a href="{{post.links.preprint}}">paper</a> /
+              {% endif %}
+              {% if post.links.code %}
+              <a href="{{post.links.code}}">code</a> /
               {% endif %}
               <p></p>
               {{ post.excerpt }}
@@ -265,7 +256,7 @@
             <td style="padding:0px">
               <br>
               <p style="text-align:center;font-size:small;">
-                Modified and borrowed code from https://leonidk.com/. Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website.</a>
+                Modified and borrowed code from <a style="font-size:small;" href="https://leonidk.com/">Leonid Keselman's website</a>. Original design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website.</a>
               </p>
             </td>
           </tr>
