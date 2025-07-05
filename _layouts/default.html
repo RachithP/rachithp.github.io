@@ -210,7 +210,7 @@
           {% assign sorted_projects = site.posts.projects | sort:"order" %}
           {% for project in sorted_projects %}
           {% assign sorted_pubs = project.publications | sort:"date" %}
-          {% for post in sorted_pubs %}
+          {% for post in sorted_pubs reversed %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="/{{post.links.img}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />

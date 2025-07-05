@@ -17,5 +17,4 @@ publications:
     links:
       img: /assets/projects/presentations/bayesian-DL.png
       preprint: //docs.google.com/presentation/d/1od57htxX1-WxBv2cJE8da-_4egc1HbYsy3ToU6S25u8/edit?usp=sharing
-      
 ---
