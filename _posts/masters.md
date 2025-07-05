@@ -1,5 +1,5 @@
 ---
-title: masters
+title: projects
 categories: computer vision, robotics, motion-planning, controls 
 order: 1
 

@@ -207,9 +207,10 @@
         </table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
-          {% assign sorted_projects = site.posts.projects | sort:"order" %}
-          {% for project in sorted_projects %}
-          {% assign sorted_pubs = project.publications | sort:"date" %}
+          {% assign sorted_mds = site.posts | sort:"order" %}
+          {% for md in sorted_mds %}
+          {% if md.title == 'projects' %}
+          {% assign sorted_pubs = md.publications | sort:"date" %}
           {% for post in sorted_pubs reversed %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
@@ -247,6 +248,7 @@
             </td>
           </tr>
           {% endfor %}
+          {% endif %}
           {% endfor %}
         </table>
 

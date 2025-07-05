@@ -1,5 +1,5 @@
 ---
-title: undergrad
+title: projects
 categories: Signal Processing, Machine Learning
 order: 3
 

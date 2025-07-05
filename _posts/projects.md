@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects
-order: 2
+order: 5
 description: The following contains list of several projects during my voyage into Robotics.
 ---
 

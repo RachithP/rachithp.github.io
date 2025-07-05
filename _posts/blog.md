@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Blog
+title: blog
 description: Happy reading! ;)
-order: 3
+order: 4
 ---
 
 <div class="posts">

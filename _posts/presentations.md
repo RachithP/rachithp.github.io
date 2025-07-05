@@ -1,5 +1,5 @@
 ---
-title: presentations
+title: projects
 categories: deep learning, computer vision
 order: 2
 
