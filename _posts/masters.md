@@ -1,4 +1,5 @@
 ---
+layout: post
 title: projects
 categories: computer vision, robotics, motion-planning, controls 
 order: 1

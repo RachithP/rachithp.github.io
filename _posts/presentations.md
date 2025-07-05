@@ -1,4 +1,5 @@
 ---
+layout: post
 title: projects
 categories: deep learning, computer vision
 order: 2
