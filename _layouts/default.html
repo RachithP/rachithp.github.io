@@ -1,21 +1,268 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
 
-  {% include head.html %}
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  <body>
+    gtag('config', 'G-E00L9PT3V9');
+  </script>
+  <title>{{ site.name }}</title>
 
-    {% include header.html %}
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
+  <meta name="author" content="{{ site.name }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-    {% include footer.html %}
+</head>
 
-  </body>
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <h1>
+                Rachith Prakash
+              </h1>
+              <p>I'm a research engineer at Intel. My interests and experiences are shaped around building software solutions across the intersection of Computer Vision, Robotics and Embodied-AI domains. I primarily develop software frameworks, and functionalities to support research in Embodied AI, Computer Vision domains. I'm currently working on <a href="https://github.com/spear-sim/spear">SPEAR - A Simulator for Photorealistic Embodied AI Research </a>.
+              </p>
+              <p>
+              I obtained my <a href="https://robotics.umd.edu/">Masters in Robotics </a> from the University of Maryland, College Park in 2020. During my Masters, I explored Bayesian Deep Learning with primary focus on Reinforcement Learning. I obtained my Bachelors in Electronics and Communications Engineering from the <a href="https://www.nitk.ac.in/">National Institute of Technology Karntaka Surathkal (NITK)</a> in 2016. At NITK, I worked on developing <a href="https://www.youtube.com/watch?v=687DesAL3YE">Brain Computer Interface Applications</a> as my final project and was advised by <a href="http://www.ece.nitk.ac.in/faculty/deepu-vijayasenan">Dr. Deepu Vijayasenan</a>.
+              </p>
+              <p style="text-align:center">
+                <a target="_blank" href="https://mailhide.io/e/B8TyS"> Email</a> &nbsp;/&nbsp;
+                <a href="https://github.com/rachithp">GitHub</a> &nbsp;/&nbsp;
+                <a href="https://scholar.google.com/citations?user=qVAZ2PsAAAAJ&hl">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="https://www.linkedin.com/in/rachithprakash"> LinkedIn </a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <img style="width:100%;max-width:100%" alt="profile photo" src="images/about.jpg">
+            </td>
+          </tr>
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Research</h2>
+              <p>
+                I'm interested in computer vision, machine learning, embodied-ai, graphics and robotics.
+              </p>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Updates</h2>
+              <p>
+                <ul>
+                <li>[06/2025] <a href="https://embodied-ai.org/cvpr2025/">Embodied-AI workshop</a> at CVPR.</li>
+                <li>[06/2024] SPEAR made its 5th open-source release! Check it out <a href="https://github.com/spear-sim/spear/releases/tag/v0.5.0">here</a>.</li>
+                <li>[10/2023] Presented SPEAR at the Intel Labs Open House event.</li>
+                <li>[12/2022] SPEAR is now open-source!! 🥳</li>
+                <li>[10/2020] Building <a href="https://github.com/spear-sim/spear">SPEAR - A Simulator for Photorealistic Embodied AI Research </a> from the ground up!</li>
+                <li>[09/2020] I've joined the Intelligent Systems Lab, led by <a href="http://vladlen.info/">Dr. Vladlen Koltun</a> at Intel, as a research engineer.</li>
+                </ul>
+              </p>
+            </td>
+          </tr>
+        </table>
+        <ul>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'research' %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              <br>
+              {{post.authors}}
+
+              <br>
+              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+              <br>
+              {% if post.arxiv %}
+              <a href="{{post.arxiv}}">arxiv</a> /
+              {% endif %}
+              {% if post.video %}
+              <a href="{{post.video}}">video</a> /
+              {% endif %}
+              {% if post.code %}
+              <a href="{{post.code}}">code</a> /
+              {% endif %}
+              {% if post.poster %}
+              <a href="{{post.poster}}">poster</a> /
+              {% endif %}
+              {% if post.slides %}
+              <a href="{{post.slides}}">slides</a> /
+              {% endif %}
+              {% if post.website %}
+              <a href="{{post.website}}">website</a> /
+              {% endif %}
+              {% if post.youtube %}
+              <a href="{{post.youtube}}">youtube</a> /
+              {% endif %}
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+        <br>
+        <br>
+        <br>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Intel Projects</h2>
+              <p>Some of my publicly disclosed work at Intel
+              </p>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'Intel' %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              <br>
+              <em>{{post.categories}} {{post.course}}</em>
+              <br>
+              {{ post.date | date: "%Y-%m-%d" }}
+
+              <br>
+              {% if post.website %}
+              <a href="{{post.website}}">website</a> /
+              {% endif %}
+              {% if post.paper %}
+              <a href="{{post.paper}}">paper</a> /
+              {% endif %}
+              {% if post.patent %}
+              <a href="{{post.patent}}">patent</a> /
+              {% endif %}
+              {% if post.patent2 %}
+              <a href="{{post.patent2}}">patent #2</a> /
+              {% endif %}
+              {% if post.patent3 %}
+              <a href="{{post.patent3}}">patent #3</a> /
+              {% endif %}
+              {% if post.video %}
+              <a href="{{post.video}}">video</a> /
+              {% endif %}
+              {% if post.video2 %}
+              <a href="{{post.video2}}">video #2</a> /
+              {% endif %}
+              {% if post.code %}
+              <a href="{{post.code}}">code</a> /
+              {% endif %}
+              {% if post.poster %}
+              <a href="{{post.poster}}">poster</a> /
+              {% endif %}
+              {% if post.slides %}
+              <a href="{{post.slides}}">slides</a> /
+              {% endif %}
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+        <br>
+        <br>
+        <br>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Other Projects</h2>
+              <p> These include coursework, side projects and unpublished research work. 
+              </p>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          {% assign sorted_projects = site.posts.projects | sort:"order" %}
+          {% for project in sorted_projects %}
+          {% assign sorted_pubs = project.publications | sort:"date" %}
+          {% for post in sorted_pubs reversed %}
+          <tr>
+            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="/{{post.links.img}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+            </td>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              <br>
+              {{post.authors}}
+
+              <br>
+              {{ post.date | date: "%Y-%m" }}
+
+              <br>
+              {% if post.website %}
+              <a href="{{post.website}}">website</a> /
+              {% endif %}
+              {% if post.poster %}
+              <a href="{{post.poster}}">poster</a> /
+              {% endif %}
+              {% if post.slides %}
+              <a href="{{post.slides}}">slides</a> /
+              {% endif %}
+              {% if post.links.video %}
+              <a href="{{post.links.video}}">video</a> /
+              {% endif %}
+              {% if post.links.preprint %}
+              <a href="{{post.links.preprint}}">paper</a> /
+              {% endif %}
+              {% if post.links.code %}
+              <a href="{{post.links.code}}">code</a> /
+              {% endif %}
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endfor %}
+          {% endfor %}
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:center;font-size:small;">
+                Modified and borrowed code from <a style="font-size:small;" href="https://leonidk.com/">Leonid Keselman's website</a>. Original design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website.</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
 
 </html>
