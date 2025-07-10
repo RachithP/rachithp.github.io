@@ -257,27 +257,28 @@
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
               <h3>{{post.title}}</h3>
+              {% if post.authors %}
               <br>
               {{post.authors}}
-
+              {% endif %}
               <br>
               {{ post.date | date: "%Y-%m" }}
 
               <br>
               {% if post.website %}
-              <a href="{{post.website}}">website</a> /
+              <a href="{{post.website}}">website</a>
               {% endif %}
               {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
+              <a href="{{post.poster}}">poster</a>
               {% endif %}
               {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
+              <a href="{{post.slides}}">slides</a>
               {% endif %}
               {% if post.links.video %}
-              <a href="{{post.links.video}}">video</a> /
+              <a href="{{post.links.video}}">video</a>
               {% endif %}
               {% if post.links.preprint %}
-              <a href="{{post.links.preprint}}">paper</a> /
+              <a href="{{post.links.preprint}}">paper</a>
               {% endif %}
               {% if post.links.code %}
               <a href="{{post.links.code}}">code</a>

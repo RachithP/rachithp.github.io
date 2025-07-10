@@ -2,7 +2,7 @@
 layout: post
 title: presentations
 categories: deep learning, computer vision
-order: 2
+order: 3
 
 publications:
   - date: 2019-12
