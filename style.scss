@@ -100,9 +100,12 @@ img {
   border: 1px solid rgba(26, 26, 31, 0.08);
   box-shadow: 0 12px 28px rgba(17, 17, 24, 0.08);
   backdrop-filter: blur(8px);
-  width: 100%;
+  width: fit-content;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+  z-index: 10;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .section-nav {
@@ -379,6 +382,11 @@ img {
   .hero__media {
     max-width: 420px;
   }
+
+  .nav-panel--floating {
+    right: 12px;
+    top: 90px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -427,4 +435,23 @@ img {
   .section__header p a {
     transition: none;
   }
+}
+.nav-panel--floating {
+  position: fixed;
+  right: max(24px, calc((100vw - 1100px) / 2 - 160px));
+  top: 120px;
+  width: auto;
+  border-radius: 20px;
+  padding: 12px 14px;
+  transform: translateY(0);
+}
+
+.nav-panel--floating .section-nav {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.nav-panel--floating .section-nav a {
+  text-align: center;
 }
