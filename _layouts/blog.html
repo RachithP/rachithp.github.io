@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E00L9PT3V9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-E00L9PT3V9');
+  </script>
+  <title>{{ site.title }} | Blog</title>
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+  <meta name="author" content="{{ site.title }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <main class="page page--blog">
+    <section class="hero hero--compact reveal delay-1">
+      <div class="hero__copy">
+        <h1>Blog</h1>
+        <div class="prose">
+          <p>{{ page.description }}</p>
+        </div>
+        <nav class="section-nav">
+          <a href="{{ site.baseurl }}/">Back to home</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section reveal delay-2">
+      <div class="cards">
+        {% for post in site.posts %}
+        {% if post.categories contains 'blog' %}
+        <article class="card card--text">
+          <div class="card__body">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p class="meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+            <div class="excerpt">{{ post.excerpt }}</div>
+          </div>
+        </article>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
