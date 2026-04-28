@@ -294,12 +294,35 @@ img {
   grid-template-columns: 1fr;
 }
 
+.card--wide-media {
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+}
+
+.card__media {
+  overflow: hidden;
+}
+
 .card__media img {
   border-radius: 12px;
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+}
+
+.card__media--contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 12px;
+}
+
+.card__media--contain img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2468 / 1274;
+  object-fit: contain;
 }
 
 .card:hover {

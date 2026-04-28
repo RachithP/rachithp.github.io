@@ -32,7 +32,7 @@
   <main class="page">
     <section class="hero reveal delay-1">
       <div class="hero__copy">
-        <h1>Rachith Prakash</h1>
+        <h1>Rachith Dey-Prakash</h1>
         <div class="prose">
           <p>
             I’m a Research Engineer passionate about building intelligent systems that bridge the gap between
@@ -121,8 +121,8 @@
         {% if x.title == 'projects' %}
         {% assign sorted_pubs = x.publications | sort:"date" %}
         {% for post in sorted_pubs reversed %}
-        <article class="card">
-          <div class="card__media">
+        <article class="card{% if post.media_layout == 'wide' %} card--wide-media{% endif %}{% if post.media_layout == 'feature' %} card--feature{% endif %}">
+          <div class="card__media{% if post.image_fit == 'contain' %} card__media--contain{% endif %}{% if post.image_fit == 'full' %} card__media--full{% endif %}">
             <img src="/{{post.links.img}}" alt="project image" />
           </div>
           <div class="card__body">
