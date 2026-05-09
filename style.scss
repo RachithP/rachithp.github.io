@@ -402,15 +402,16 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  align-self: stretch;
   border-radius: 12px;
+  overflow: hidden;
 }
 
 .card__media--contain img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 2468 / 1274;
+  height: 100%;
   object-fit: contain;
+  object-position: center;
 }
 
 .card:hover .card__media img {
