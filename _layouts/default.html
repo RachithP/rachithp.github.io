@@ -30,58 +30,20 @@
 
 <body>
   <main class="page">
-    <section class="hero reveal delay-1">
-      <div class="hero__copy">
-        <h1>Rachith Dey-Prakash</h1>
-        <div class="prose">
-          <p>
-            I’m a Research Engineer passionate about building intelligent systems that bridge the gap between
-            simulation and real-world deployment. My work focuses on 3D vision, robotics, and deep
-            learning—designing algorithms, developing simulation frameworks, and creating scalable synthetic data
-            pipelines to accelerate machine learning workflows.
-          </p>
-          <p>
-            At Intel Labs, I’ve contributed to novel 3D object surface reconstruction methods achieving 90× speedups
-            over traditional approaches, co-developed <a href="https://github.com/spear-sim/spear">SPEAR </a> (an
-            open-source photorealistic simulator in Unreal Engine 5), and led automation efforts that cut release
-            times by over 95%. I’ve also driven evaluation pipelines for diffusion models to optimize for real-world
-            deployment. I’m also actively involved in the academic community as part of the organizing committee for
-            the Embodied AI Workshop at CVPR 2025.
-          </p>
-          <p>
-            My background spans machine learning, computer vision, DevOps, and software engineering, with hands-on
-            experience in C++, Python, PyTorch, Unreal Engine, and cloud infrastructure. I’m always looking for
-            opportunities to solve complex challenges and push the boundaries of AI-driven systems.
-          </p>
-          <p>
-            I obtained my <a href="https://robotics.umd.edu/">Masters in Robotics </a> from the University of
-            Maryland, College Park in 2020. During my Masters, I explored Bayesian Deep Learning with primary focus
-            on Reinforcement Learning. I was also a Graduate Teaching Assistant for <a
-              href="https://www.linkedin.com/in/chad-kessens-9147294/">Dr. Chad Kessens </a>(ENPM662 - Robot
-            Modeling).
-          </p>
-          <p>
-            I obtained my Bachelors in Electronics and Communications Engineering from the <a
-              href="https://www.nitk.ac.in/">National Institute of Technology Karntaka Surathkal (NITK)</a> in 2016.
-            At NITK, I worked on developing <a href="https://www.youtube.com/watch?v=687DesAL3YE">Brain Computer
-              Interface Applications</a> as my final project and was advised by <a
-              href="http://www.ece.nitk.ac.in/faculty/deepu-vijayasenan">Dr. Deepu Vijayasenan</a>.
-          </p>
-        </div>
-        <div class="hero__links">
-          <a target="_blank" href="https://mailhide.io/e/B8TyS">Email</a>
-          <a href="https://github.com/rachithp">GitHub</a>
-          <a href="https://scholar.google.com/citations?user=qVAZ2PsAAAAJ&hl">Google Scholar</a>
-          <a href="https://www.linkedin.com/in/rachithprakash">LinkedIn</a>
-        </div>
-      </div>
-      <div class="hero__media">
-        <img alt="profile photo" src="assets/about.jpg">
+    <section class="hero hero-profile reveal delay-1">
+      <img class="profile-photo" alt="profile photo" src="assets/about.jpg">
+      <h1>Rachith Dey-Prakash</h1>
+      <p class="tagline">Research Engineer &middot; 3D Vision &middot; Robotics &middot; Deep Learning</p>
+      <div class="hero__links">
+        <a href="https://github.com/rachithp">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=qVAZ2PsAAAAJ&hl">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/rachithprakash">LinkedIn</a>
       </div>
     </section>
 
     <section class="nav-panel reveal delay-2 js-floating-nav" aria-label="Site navigation">
       <nav class="section-nav">
+        <a href="#bio">Bio</a>
         <a href="#updates">Updates</a>
         <a href="#projects">Projects</a>
         <a href="#presentations">Presentations</a>
@@ -89,28 +51,104 @@
       </nav>
     </section>
 
-    <section id="updates" class="section reveal delay-3">
+    <section id="bio" class="section reveal delay-3">
       <div class="section__header">
-        <h2>Updates</h2>
+        <h2>Bio</h2>
       </div>
-      <div class="updates-card">
-        <ul class="updates-list">
-          <li>[06/2025] I was part of the organizing committee for the <a
-              href="https://embodied-ai.org/cvpr2025/">Embodied-AI workshop</a> at CVPR '25.</li>
-          <li>[07/2024] Generating loads of synthetic data for 3D object's surface reconstruction.</li>
-          <li>[06/2024] SPEAR made its 5th open-source release! Check it out <a
-              href="https://github.com/spear-sim/spear/releases/tag/v0.5.0">here</a>.</li>
-          <li>[10/2023] Presented SPEAR at the Intel Labs Open House event.</li>
-          <li>[12/2022] SPEAR is now open-source!! 🥳</li>
-          <li>[10/2020] Building <a href="https://github.com/spear-sim/spear">SPEAR - A Simulator for
-              Photorealistic Embodied AI Research </a> from the ground up!</li>
-          <li>[09/2020] I've joined the Intelligent Systems Lab, led by <a href="http://vladlen.info/">Dr. Vladlen
-              Koltun</a> at Intel, as a research engineer.</li>
-        </ul>
+      <div class="prose">
+        <p>
+          I'm a Research Engineer passionate about building intelligent systems that bridge the gap between
+          simulation and real-world deployment. My work focuses on 3D vision, robotics, and deep
+          learning&mdash;designing algorithms, developing simulation frameworks, and creating scalable synthetic data
+          pipelines to accelerate machine learning workflows.
+        </p>
+        <p>
+          At Intel Labs, I've contributed to novel 3D object surface reconstruction methods achieving 90&times; speedups
+          over traditional approaches, co-developed <a href="https://github.com/spear-sim/spear">SPEAR</a> (an
+          open-source photorealistic simulator in Unreal Engine 5), and led automation efforts that cut release
+          times by over 95%. I've also driven evaluation pipelines for diffusion models to optimize for real-world
+          deployment. I'm also actively involved in the academic community as part of the organizing committee for
+          the Embodied AI Workshop at CVPR 2025.
+        </p>
+        <p>
+          My background spans machine learning, computer vision, DevOps, and software engineering, with hands-on
+          experience in C++, Python, PyTorch, Unreal Engine, and cloud infrastructure. I'm always looking for
+          opportunities to solve complex challenges and push the boundaries of AI-driven systems.
+        </p>
       </div>
     </section>
 
-    <section id="projects" class="section reveal delay-4">
+    <section id="experience" class="section reveal delay-4">
+      <ul class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-icon-wrap">
+            <img class="org-icon" src="https://www.google.com/s2/favicons?domain=intel.com&sz=64" alt="Intel Labs">
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h3>Intel Labs</h3>
+              <span class="timeline-role">Research Engineer</span>
+              <span class="timeline-date">2020 &ndash; Present</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Co-developed <a href="https://github.com/spear-sim/spear">SPEAR</a>, an open-source photorealistic simulator in Unreal Engine 5</li>
+              <li>Novel 3D object surface reconstruction methods achieving 90&times; speedups over traditional approaches</li>
+              <li>Led automation efforts cutting release times by over 95%</li>
+              <li>Drove evaluation pipelines for diffusion models to optimize real-world deployment</li>
+              <li>Organizing committee for the <a href="https://embodied-ai.org/cvpr2025/">Embodied AI Workshop</a> at CVPR 2025</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-icon-wrap">
+            <img class="org-icon" src="https://www.google.com/s2/favicons?domain=umd.edu&sz=64" alt="University of Maryland">
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h3>University of Maryland, College Park</h3>
+              <span class="timeline-role">Masters in <a href="https://robotics.umd.edu/">Robotics</a></span>
+              <span class="timeline-date">2018 &ndash; 2020</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Bayesian Deep Learning with primary focus on Reinforcement Learning</li>
+              <li>Teaching Assistant for ENPM662 &ndash; Robot Modeling (<a href="https://www.linkedin.com/in/chad-kessens-9147294/">Dr. Chad Kessens</a>)</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-icon-wrap">
+            <img class="org-icon" src="https://www.google.com/s2/favicons?domain=nitk.ac.in&sz=64" alt="NITK">
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-header">
+              <h3><a href="https://www.nitk.ac.in/">National Institute of Technology Karnataka (NITK)</a></h3>
+              <span class="timeline-role">Bachelors in Electronics &amp; Communication Engineering</span>
+              <span class="timeline-date">2012 &ndash; 2016</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li><a href="https://www.youtube.com/watch?v=687DesAL3YE">Brain Computer Interface Applications</a> &mdash; advised by <a href="http://www.ece.nitk.ac.in/faculty/deepu-vijayasenan" referrerpolicy="no-referrer">Dr. Deepu Vijayasenan</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="updates" class="section reveal delay-5">
+      <div class="section__header">
+        <h2>Updates</h2>
+      </div>
+      <ul class="updates-list">
+        <li><span class="update-date">Jun 2025</span><span class="update-text">Part of the organizing committee for the <a href="https://embodied-ai.org/cvpr2025/">Embodied-AI workshop</a> at CVPR '25.</span></li>
+        <li><span class="update-date">Jul 2024</span><span class="update-text">Generating synthetic data for 3D object surface reconstruction.</span></li>
+        <li><span class="update-date">Jun 2024</span><span class="update-text"><a href="https://github.com/spear-sim/spear">SPEAR</a> made its 5th open-source release! Check it out <a href="https://github.com/spear-sim/spear/releases/tag/v0.5.0">here</a>.</span></li>
+        <li><span class="update-date">Oct 2023</span><span class="update-text">Presented <a href="https://github.com/spear-sim/spear">SPEAR</a> at the Intel Labs Open House event.</span></li>
+        <li><span class="update-date">Dec 2022</span><span class="update-text"><a href="https://github.com/spear-sim/spear">SPEAR</a> is now open-source! 🥳</span></li>
+        <li><span class="update-date">Oct 2020</span><span class="update-text">Building <a href="https://github.com/spear-sim/spear">SPEAR</a> — a simulator for photorealistic embodied AI research — from the ground up.</span></li>
+        <li><span class="update-date">Sep 2020</span><span class="update-text">Joined the Intelligent Systems Lab, led by <a href="http://vladlen.info/" referrerpolicy="no-referrer">Dr. Vladlen Koltun</a> at Intel, as a research engineer.</span></li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section reveal delay-6">
       <div class="section__header">
         <h2>Projects</h2>
         <p>These include coursework, side projects and unpublished research work.</p>
@@ -162,7 +200,7 @@
       </div>
     </section>
 
-    <section id="presentations" class="section reveal delay-5">
+    <section id="presentations" class="section reveal delay-6">
       <div class="section__header">
         <h2>Presentations</h2>
       </div>
