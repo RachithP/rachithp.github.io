@@ -25,8 +25,8 @@ body {
   color: var(--ink);
   background: radial-gradient(circle at top left, #fff7ef 0%, #f6eadb 45%, #e8d4c2 100%);
   font-family: "Source Serif 4", "Iowan Old Style", "Palatino", serif;
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: 15.5px;
+  line-height: 1.6;
   position: relative;
   overflow-x: hidden;
 }
@@ -66,10 +66,10 @@ img {
 .page {
   max-width: 760px;
   margin: 0 auto;
-  padding: 72px 24px 64px;
+  padding: 48px 24px 48px;
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: 36px;
 }
 
 .reveal {
@@ -169,7 +169,7 @@ img {
 
 .hero h1 {
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
-  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
   margin: 0;
   letter-spacing: -0.02em;
 }
@@ -177,7 +177,7 @@ img {
 .tagline {
   color: var(--muted);
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin: 0;
 }
 
@@ -210,7 +210,7 @@ img {
 .section {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 14px;
 }
 
 .section__header {
@@ -221,7 +221,7 @@ img {
 
 .section__header h2 {
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 0;
   letter-spacing: -0.01em;
 }
@@ -255,7 +255,7 @@ img {
 .timeline-item {
   display: flex;
   gap: 20px;
-  padding-bottom: 36px;
+  padding-bottom: 22px;
   position: relative;
 }
 
@@ -287,7 +287,7 @@ img {
 }
 
 .timeline-header {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .timeline-header h3 {
@@ -319,13 +319,13 @@ img {
 }
 
 .timeline-bullets {
-  margin: 8px 0 0;
+  margin: 6px 0 0;
   padding-left: 18px;
   color: var(--muted);
 }
 
 .timeline-bullets li {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 /* ── Updates ────────────────────────────────────────────────── */
@@ -339,8 +339,8 @@ img {
 .updates-list li {
   display: grid;
   grid-template-columns: 80px 1fr;
-  gap: 20px;
-  padding: 14px 0;
+  gap: 16px;
+  padding: 9px 0;
   border-bottom: 1px solid rgba(26, 26, 31, 0.07);
   align-items: baseline;
 }
@@ -370,7 +370,7 @@ img {
 }
 
 .publication {
-  padding: 16px 0;
+  padding: 12px 0;
   border-bottom: 1px solid rgba(26, 26, 31, 0.07);
 }
 
@@ -415,14 +415,14 @@ img {
 
 .cards {
   display: grid;
-  gap: 20px;
+  gap: 12px;
 }
 
 .card {
   display: grid;
   grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
-  gap: 24px;
-  padding: 20px 0;
+  gap: 20px;
+  padding: 14px 0;
   border-bottom: 1px solid rgba(26, 26, 31, 0.07);
   transition: opacity 0.2s ease;
 }
@@ -476,9 +476,9 @@ img {
 }
 
 .card__body h3 {
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
 }
 
 .meta {
@@ -535,7 +535,7 @@ img {
 /* ── Prose ──────────────────────────────────────────────────── */
 
 .prose p {
-  margin: 0 0 18px 0;
+  margin: 0 0 12px 0;
   color: var(--muted);
 }
 
@@ -585,11 +585,11 @@ img {
 
 @media (max-width: 720px) {
   body {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .page {
-    padding: 48px 18px 56px;
+    padding: 36px 18px 44px;
   }
 
   .hero-profile {
