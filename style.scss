@@ -64,7 +64,7 @@ img {
 }
 
 .page {
-  max-width: 760px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 48px 24px 48px;
   display: flex;
@@ -555,7 +555,7 @@ img {
 
 .nav-panel--floating {
   position: fixed;
-  right: max(24px, calc((100vw - 760px) / 2 - 160px));
+  right: max(24px, calc((100vw - 920px) / 2 - 160px));
   top: 120px;
   width: auto;
   border-radius: 14px;
