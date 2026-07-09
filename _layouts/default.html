@@ -40,17 +40,19 @@
       </div>
     </section>
 
-    <section class="nav-panel reveal delay-2 js-floating-nav" aria-label="Site navigation">
-      <nav class="section-nav">
-        <a href="#bio">Bio</a>
-        <a href="#updates">Updates</a>
-        <a href="#experience">Experience</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#presentations">Presentations</a>
-        <a href="{{ site.baseurl }}/blog/">Blog</a>
-      </nav>
-    </section>
+    <div class="nav-slot js-nav-slot">
+      <section class="nav-panel reveal delay-2 js-floating-nav" aria-label="Site navigation">
+        <nav class="section-nav">
+          <a href="#bio">Bio</a>
+          <a href="#updates">Updates</a>
+          <a href="#experience">Experience</a>
+          <a href="#publications">Publications</a>
+          <a href="#projects">Projects</a>
+          <a href="#presentations">Presentations</a>
+          <a href="{{ site.baseurl }}/blog/">Blog</a>
+        </nav>
+      </section>
+    </div>
 
     <section id="bio" class="section reveal delay-3">
       <div class="section__header">
@@ -296,18 +298,25 @@
   <script>
     (function () {
       var nav = document.querySelector('.js-floating-nav');
+      var navSlot = document.querySelector('.js-nav-slot');
       var hero = document.querySelector('.hero');
-      if (!nav || !hero || !('IntersectionObserver' in window)) {
+      if (!nav || !navSlot || !hero || !('IntersectionObserver' in window)) {
         return;
+      }
+
+      function setFloating(isFloating) {
+        if (isFloating) {
+          navSlot.style.height = nav.offsetHeight + 'px';
+          nav.classList.add('nav-panel--floating');
+        } else {
+          nav.classList.remove('nav-panel--floating');
+          navSlot.style.height = '';
+        }
       }
 
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            nav.classList.remove('nav-panel--floating');
-          } else {
-            nav.classList.add('nav-panel--floating');
-          }
+          setFloating(!entry.isIntersecting);
         });
       }, { rootMargin: '-12px 0px 0px 0px', threshold: 0 });
 

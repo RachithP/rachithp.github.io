@@ -94,6 +94,11 @@ img {
 
 /* ── Nav panel ─────────────────────────────────────────────── */
 
+.nav-slot {
+  display: flex;
+  justify-content: center;
+}
+
 .nav-panel {
   padding: 6px 8px;
   border-radius: 14px;
