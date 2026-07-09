@@ -11,3 +11,4 @@ package.json
 favicon.ico
 .gstack
 .claude
+.codex
